@@ -13,7 +13,7 @@ Avaric	av
 Avestan	ae
 Aymara	ay
 Azerbaijani	az
-Bambara	bm
+Bambara bm
 Bashkir	ba
 Basque	eu
 Belarusian	be

@@ -43,6 +43,10 @@ public class LanguageCodeConverter {
             while (iterator.hasNext()) {
                 String line = iterator.next();
                 // TODO Task A: use line to populate the instance variables
+                // Task A Completed
+                String[] parts = line.split("\\s+(?=\\S+$)", 2);
+                this.languageCodeToLanguage.put(parts[1], parts[0]);
+                this.languageToLanguageCode.put(parts[0], parts[1]);
             }
 
         } catch (IOException | URISyntaxException ex) {
@@ -57,7 +61,8 @@ public class LanguageCodeConverter {
      */
     public String fromLanguageCode(String code) {
         // TODO Task A: update this code to use the correct instance variable to return the appropriate value
-        return code;
+        // Task A Completed
+        return this.languageCodeToLanguage.get(code);
     }
 
     /**
@@ -67,7 +72,8 @@ public class LanguageCodeConverter {
      */
     public String fromLanguage(String language) {
         // TODO Task A: update this code to use the correct instance variable to return the appropriate value
-        return language;
+        // Task A Completed
+        return this.languageToLanguageCode.get(language);
     }
 
     /**
